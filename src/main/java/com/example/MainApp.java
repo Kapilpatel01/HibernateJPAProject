@@ -18,7 +18,15 @@ public class MainApp {
 //        dao.update(1,"KapilKumar");
 
         //delete
-        dao.delete(1);
+//        dao.delete(1);
+
+        //first level caching
+        dao.testFirstLevelCache();
+
+      //second level caching
+        dao.find(1);   // First session
+        dao.find(1);   // Second session
+
 
     }
 }

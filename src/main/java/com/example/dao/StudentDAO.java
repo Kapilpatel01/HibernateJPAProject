@@ -52,5 +52,21 @@ public class StudentDAO {
         em3.close();
     }
 
+    //first level caching
+    public void testFirstLevelCache() {
+
+        EntityManager em4 = entityManagerFactory.createEntityManager();
+        em4.getTransaction().begin();
+
+        Student s1 = em4.find(Student.class, 1);
+        System.out.println("First Fetch");
+
+        Student s2 = em4.find(Student.class, 1);
+        System.out.println("Second Fetch");
+
+        em4.getTransaction().commit();
+        em4.close();
+    }
+
 
 }
