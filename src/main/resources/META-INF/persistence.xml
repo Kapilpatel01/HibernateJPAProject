@@ -35,6 +35,9 @@
             <property name="hibernate.cache.region.factory_class"
                       value="org.infinispan.hibernate.cache.v60.InfinispanRegionFactory"/>
 
+            <property name="hibernate.cache.infinispan.cfg"
+                      value="org/infinispan/hibernate/cache/commons/builder/infinispan-configs-local.xml"/>
+
             <property name="hibernate.generate_statistics" value="true"/>
 
         </properties>

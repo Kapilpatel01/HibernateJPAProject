@@ -8,7 +8,7 @@ public class MainApp {
     public static void main(String[] args) {
         StudentDAO dao=new StudentDAO();
 //create
-//        dao.save(new Student("Kapil","Kapilkumar@gmail.com"));
+        dao.save(new Student("Kapil","Kapilkumar@gmail.com"));
 
         //view
 //        Student s=dao.find(1);
